@@ -1,0 +1,26 @@
+{
+  "name": "angular-todo",
+  "description": "a todo app",
+  "main": "index.js",
+  "authors": [
+    "Mathilde Barbier"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "todo",
+    "code-institute"
+  ],
+  "homepage": "https://github.com/mathilde206/angular_todo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6"
+  }
+}
