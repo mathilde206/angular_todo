@@ -1,0 +1,23 @@
+{
+  "name": "angular-todo",
+  "version": "1.0.0",
+  "description": "a todo app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathilde206/angular_todo.git"
+  },
+  "keywords": [
+    "todo",
+    "code-institute"
+  ],
+  "author": "Mathilde Barbier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathilde206/angular_todo/issues"
+  },
+  "homepage": "https://github.com/mathilde206/angular_todo#readme"
+}
