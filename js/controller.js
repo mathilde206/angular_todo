@@ -3,9 +3,10 @@ angular.module('RouteControllers', [])
         $scope.title = "Welcome To Angular Todo!";
     })
 
-    .controller('RegisterController', function($scope) {
+    .controller('RegisterController', function($scope, UserAPIService) {
  
         $scope.registrationUser = {};
+        var URL = "https://morning-castle-91468.herokuapp.com/";
  
         $scope.submitForm = function() {
             if ($scope.registrationForm.$valid) {
@@ -13,6 +14,13 @@ angular.module('RouteControllers', [])
                 $scope.registrationUser.password = $scope.user.password;
             }
  
-            console.log($scope.registrationUser.username + " " + $scope.registrationUser.password);
+            UserAPIService.registerUser(URL + "accounts/register/", $scope.registrationUser)
+                .then(function(result){
+                    $scope.data = result.data;
+                    alert("You have successfully registered to Angular Todo");
+                }).catch(function(err){
+                    alert("Oops! Something went wrong!");
+                    console.log(err);
+                });
         };
     });
