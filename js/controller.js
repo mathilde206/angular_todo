@@ -45,6 +45,13 @@ angular.module('RouteControllers', [])
         $scope.deleteTodo = function(id) {
             TodoAPIService.deleteTodo(URL + "todo/" + id, $scope.username, $scope.authToken).then(function(results) {
             console.log(results);
+
+            TodoAPIService.getTodos(URL + "todo/", $scope.username, $scope.authToken).then(function(results) {
+                $scope.todos = results.data || [];
+                console.log($scope.todos);
+            }).catch(function(err) {
+                console.log(err);
+            });
         }).catch(function(err) {
                 console.log(err);
         });
@@ -69,6 +76,13 @@ angular.module('RouteControllers', [])
  
                 TodoAPIService.createTodo(URL + "todo/", $scope.todo, $scope.authToken).then(function(results) {
                     console.log(results);
+                }).catch(function(err) {
+                    console.log(err);
+                });
+
+                TodoAPIService.getTodos(URL + "todo/", $scope.username, $scope.authToken).then(function(results) {
+                    $scope.todos = results.data || [];
+                    console.log($scope.todos);
                 }).catch(function(err) {
                     console.log(err);
                 });
