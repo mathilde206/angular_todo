@@ -19,7 +19,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavBarController">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">Angular Todo</a>
@@ -28,7 +28,8 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/todo">Todo</a></li>
                 <li><a href="/accounts/login">Login</a></li>
-                <li><a href="/accounts/register">Register</a></li>
+                <li><a href="/accounts/register">Register {{name}}</a></li>
+                <li><a href="/accounts/logout" ng-click="logout()">Logout</a></li>
             </ul>
         </div>
     </nav>

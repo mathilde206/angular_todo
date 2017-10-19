@@ -133,7 +133,20 @@ angular.module('RouteControllers', [])
                 });
             }
         };
+    })
+
+
+    .controller('NavBarController', function($scope, store) {
+        $scope.logout = function() {
+            store.remove("authToken");
+            store.remove("username");
+        };
+
+        $scope.name = "Bob";
     });
+
+
+    
 
     
 
