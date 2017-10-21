@@ -2,7 +2,7 @@
 <html ng-app="TodoApp">
 <head>
     <title>Angular Todo</title>
-    <base href="/"> <!-- needed for Angular HTML5 mode -->
+    <base href="/angular_todo/"> <!-- needed for Angular HTML5 mode -->
     
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
@@ -27,12 +27,12 @@
                 <a class="navbar-brand" href="/">Angular Todo</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a ng-show="LoggedIn"  > Welcome {{name}}</a></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="/todo">Todo</a></li>
-                <li><a href="/accounts/login" ng-hide="LoggedIn">Login</a></li>
-                <li><a href="/accounts/register" ng-hide="LoggedIn">Register </a></li>
-                <li><a href="/accounts/logout" ng-click="logout()" ng-show="LoggedIn">Logout</a></li>
+                <li><a ng-s/how="LoggedIn"  > Welcome {{name}}</a></li>
+                <li><a href=".">Home</a></li>
+                <li><a href="todo">Todo</a></li>
+                <li><a href="accounts/login" ng-hide="LoggedIn">Login</a></li>
+                <li><a href="accounts/register" ng-hide="LoggedIn">Register </a></li>
+                <li><a href="accounts/logout" ng-click="logout()" ng-show="LoggedIn">Logout</a></li>
             </ul>
         </div>
     </nav>
